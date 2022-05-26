@@ -1,0 +1,27 @@
+android {
+    compileSdkVersion(Config.compileSdkVersion)
+
+    defaultConfig {
+        minSdkVersion(Config.minSdkVersion)
+        targetSdkVersion(Config.targetSdkVersion)
+        versionCode = Config.appVersionCode
+        versionName = Config.appVersionName
+
+        multiDexEnabled = true
+
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
