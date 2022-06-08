@@ -1,6 +1,6 @@
 package ru.susu.scsusu.domain.usecases
 
-import ru.susu.scsusu.presentation.firstgame.FirstGameViewModel.FirstGameViewState
+import ru.susu.scsusu.presentation.first_game.FirstGameViewModel.FirstGameViewState
 
 interface FirstGameUseCase {
 

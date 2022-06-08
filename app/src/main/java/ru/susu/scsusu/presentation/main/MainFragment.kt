@@ -18,10 +18,14 @@ class MainFragment() : BaseFragment(R.layout.fragment_main) {
     override val viewModel by viewModels<MainViewModel>()
 
     override fun initView() {
-            with(binding){
-                btnGameOne.setOnClickListener {
-                    navigate(R.id.toFirstGame)
-                }
+        with(binding) {
+            btnPlot.setOnClickListener {
+                navigate(R.id.toPlots)
             }
+
+            btnWorkout.setOnClickListener {
+                navigate(R.id.toWorkout)
+            }
+        }
     }
 }

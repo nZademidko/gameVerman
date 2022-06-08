@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 apply {
@@ -77,4 +78,6 @@ dependencies {
     implementation(Dependencies.activity)
 
     implementation(Dependencies.junit)
+
+    implementation(Dependencies.fade_text)
 }

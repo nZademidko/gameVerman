@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/one"
+            style="@style/LetterSecondGame"
+            android:text="1" />
+
+        <TextView             android:id="@+id/two"
+            style="@style/LetterSecondGame"
+            android:text="2" />
+
+        <TextView
+            android:id="@+id/three"
+            style="@style/LetterSecondGame"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/four"
+            style="@style/LetterSecondGame"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/five"
+            style="@style/LetterSecondGame"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/six"
+            style="@style/LetterSecondGame"
+            android:text="6" />
+
+        <TextView
+            android:id="@+id/seven"
+            style="@style/LetterSecondGame"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/eight"
+            style="@style/LetterSecondGame"
+            android:text="8" />
+
+        <TextView
+            android:id="@+id/nine"
+            style="@style/LetterSecondGame"
+            android:text="9" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

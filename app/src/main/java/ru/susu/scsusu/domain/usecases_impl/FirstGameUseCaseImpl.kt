@@ -1,11 +1,17 @@
 package ru.susu.scsusu.domain.usecases_impl
 
 import ru.susu.scsusu.domain.usecases.FirstGameUseCase
-import ru.susu.scsusu.presentation.firstgame.FirstGameViewModel.FirstGameViewState
+import ru.susu.scsusu.presentation.first_game.FirstGameViewModel.FirstGameViewState
 import javax.inject.Inject
 import kotlin.random.Random
 
 class FirstGameUseCaseImpl @Inject constructor() : FirstGameUseCase {
+
+
+//    sealed class Quest() {
+//        class JustText(text: String, buttons: HashMap<Int, Int>) : Quest()
+//        class MiniGame() : Quest()
+//    }
 
     private var numbers = ArrayList<Int>()
     private var difficulty = 0;
@@ -54,10 +60,10 @@ class FirstGameUseCaseImpl @Inject constructor() : FirstGameUseCase {
 
     private fun generateNumber(): Int {
         val number = when (difficulty) {
-            0 -> Random.nextInt(0,10)
-            1 -> Random.nextInt(1,15)
-            2 -> Random.nextInt(7,20)
-            3 -> Random.nextInt(-10,20)
+            0 -> Random.nextInt(0, 10)
+            1 -> Random.nextInt(1, 15)
+            2 -> Random.nextInt(7, 20)
+            3 -> Random.nextInt(-10, 20)
             else -> 0
         }
         return number

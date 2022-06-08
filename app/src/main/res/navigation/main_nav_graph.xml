@@ -9,24 +9,44 @@
         android:id="@+id/mainFragment"
         android:name="ru.susu.scsusu.presentation.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/toPlots"
+            app:destination="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toWorkout"
+            app:destination="@+id/workoutFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/plotsFragment"
+        android:name="ru.susu.scsusu.presentation.plots.PlotsFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="ru.susu.scsusu.presentation.workout.WorkoutFragment">
 
         <action
             android:id="@+id/toFirstGame"
-            app:destination="@id/firstGameFragment"/>
+            app:destination="@id/firstGameFragment" />
+
+        <action
+            android:id="@+id/toSecondGame"
+            app:destination="@id/secondGameFragment" />
 
     </fragment>
 
     <fragment
         android:id="@+id/firstGameFragment"
-        android:name="ru.susu.scsusu.presentation.firstgame.FirstGameFragment"
-        android:label="fragment_game_first"
-        tools:layout="@layout/fragment_game_first" >
+        android:name="ru.susu.scsusu.presentation.first_game.FirstGameFragment" />
 
-        <action
-            android:id="@+id/toFirstGame"
-            app:destination="@id/firstGameFragment"/>
+    <fragment
+        android:id="@+id/secondGameFragment"
+        android:name="ru.susu.scsusu.presentation.second_game.SecondGameFragment" />
 
-
-    </fragment>
 </navigation>

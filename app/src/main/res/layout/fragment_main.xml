@@ -8,15 +8,15 @@
 
 
     <Button
-        android:id="@+id/btnGameOne"
+        android:id="@+id/btnPlot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Игра 1" />
+        android:text="Сюжет" />
 
     <Button
-        android:id="@+id/btnGameTwo"
+        android:id="@+id/btnWorkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Игра 2" />
+        android:text="Тренировка" />
 
 </LinearLayout>

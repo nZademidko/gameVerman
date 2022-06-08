@@ -82,4 +82,6 @@ object Dependencies {
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakcanary}"
 
     const val image_cropper = "com.github.Drjacky:ImagePicker:${Versions.image_cropper}"
+
+    const val fade_text = "com.github.chtgupta:FadeInTextView-Android:${Versions.fade_text}"
 }

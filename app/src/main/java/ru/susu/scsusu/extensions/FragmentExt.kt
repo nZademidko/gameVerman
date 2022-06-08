@@ -12,3 +12,5 @@ inline fun <T> Fragment.observe(flow: Flow<T>, crossinline onChanged: (T) -> Uni
 }
 
 fun Fragment.navigate(directions: Int) = findNavController().navigate(directions)
+
+fun Fragment.navigate(directions: NavDirections) = findNavController().navigate(directions)

@@ -1,4 +1,4 @@
-package ru.susu.scsusu.presentation.firstgame
+package ru.susu.scsusu.presentation.first_game
 
 import android.widget.Toast
 import androidx.fragment.app.viewModels
