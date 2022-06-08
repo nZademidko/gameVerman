@@ -3,13 +3,17 @@ package ru.susu.scsusu.presentation.second_game
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.redmadrobot.extensions.viewbinding.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ru.susu.scsusu.R
 import ru.susu.scsusu.databinding.FragmentGameSecondBinding
+import ru.susu.scsusu.extensions.navigate
 import ru.susu.scsusu.extensions.observe
 import ru.susu.scsusu.presentation.base.BaseFragment
+import ru.susu.scsusu.presentation.first_game.FirstGameFragmentArgs
+import ru.susu.scsusu.presentation.first_game.FirstGameFragmentDirections
 
 @AndroidEntryPoint
 class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
@@ -17,6 +21,7 @@ class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
     override val viewModel by viewModels<SecondGameViewModel>()
     private val binding by viewBinding<FragmentGameSecondBinding>()
     private val buttonList = mutableListOf<TextView>()
+    private val args by navArgs<SecondGameFragmentArgs>()
 
     override fun initView() {
         with(binding) {
@@ -107,6 +112,17 @@ class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
 
         observe(viewModel.showToastActionFlow) {
             Snackbar.make(requireView(), it, Snackbar.LENGTH_LONG).show()
+        }
+
+        observe(viewModel.navAction) { isCorrect ->
+            if (isCorrect) {
+                Snackbar.make(requireView(), "Вам удалось!!!", Snackbar.LENGTH_LONG).show()
+                navigate(SecondGameFragmentDirections.toGameScreen(args.resId))
+            } else {
+                Snackbar.make(requireView(), "К сожалению вы проиграли", Snackbar.LENGTH_LONG)
+                    .show()
+                navigate(SecondGameFragmentDirections.toPlots())
+            }
         }
     }
 }

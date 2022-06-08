@@ -55,6 +55,4 @@ object Versions {
     internal const val stetho = "1.6.0"
 
     internal const val image_cropper = "2.1.15"
-
-    internal const val fade_text = "2.1.0"
 }

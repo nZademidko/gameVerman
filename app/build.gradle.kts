@@ -78,6 +78,4 @@ dependencies {
     implementation(Dependencies.activity)
 
     implementation(Dependencies.junit)
-
-    implementation(Dependencies.fade_text)
 }

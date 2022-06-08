@@ -5,6 +5,7 @@ import com.redmadrobot.extensions.viewbinding.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ru.susu.scsusu.R
 import ru.susu.scsusu.databinding.FragmentPlotsBinding
+import ru.susu.scsusu.extensions.navigate
 import ru.susu.scsusu.presentation.base.BaseFragment
 import ru.susu.scsusu.presentation.base.BaseViewModel
 
@@ -14,5 +15,11 @@ class PlotsFragment : BaseFragment(R.layout.fragment_plots) {
     override val viewModel by viewModels<BaseViewModel>()
     private val binding by viewBinding<FragmentPlotsBinding>()
 
-
+    override fun initView() {
+        with(binding) {
+            btnFirstGame.setOnClickListener {
+                navigate(PlotsFragmentDirections.toGameScreen(R.string.text_101))
+            }
+        }
+    }
 }

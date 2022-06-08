@@ -25,6 +25,10 @@
         android:id="@+id/plotsFragment"
         android:name="ru.susu.scsusu.presentation.plots.PlotsFragment">
 
+        <action
+            android:id="@+id/toGameScreen"
+            app:destination="@+id/gameScreenFragment" />
+
     </fragment>
 
     <fragment
@@ -43,10 +47,90 @@
 
     <fragment
         android:id="@+id/firstGameFragment"
-        android:name="ru.susu.scsusu.presentation.first_game.FirstGameFragment" />
+        android:name="ru.susu.scsusu.presentation.first_game.FirstGameFragment">
+
+        <action
+            android:id="@+id/toGameScreen"
+            app:destination="@id/gameScreenFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toPlots"
+            app:destination="@id/plotsFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <argument
+            android:name="level"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <argument
+            android:name="maxLevel"
+            android:defaultValue="4"
+            app:argType="integer" />
+
+        <argument
+            android:name="resId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/secondGameFragment"
-        android:name="ru.susu.scsusu.presentation.second_game.SecondGameFragment" />
+        android:name="ru.susu.scsusu.presentation.second_game.SecondGameFragment">
+
+        <action
+            android:id="@+id/toGameScreen"
+            app:destination="@id/gameScreenFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toPlots"
+            app:destination="@id/plotsFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <argument
+            android:name="level"
+            android:defaultValue="3"
+            app:argType="integer" />
+
+
+        <argument
+            android:name="maxLevel"
+            android:defaultValue="5"
+            app:argType="integer" />
+
+        <argument
+            android:name="resId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameScreenFragment"
+        android:name="ru.susu.scsusu.presentation.plots.GameScreenFragment">
+
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/toPlots"
+            app:destination="@+id/plotsFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toFirstGame"
+            app:destination="@+id/firstGameFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toSecondGame"
+            app:destination="@+id/secondGameFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+    </fragment>
 
 </navigation>

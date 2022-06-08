@@ -83,5 +83,4 @@ object Dependencies {
 
     const val image_cropper = "com.github.Drjacky:ImagePicker:${Versions.image_cropper}"
 
-    const val fade_text = "com.github.chtgupta:FadeInTextView-Android:${Versions.fade_text}"
 }
