@@ -1,1 +1,1 @@
-D:\Android Studio projects\scSusu\buildSrc\build\classes\kotlin\main\Config.class;D:\Android Studio projects\scSusu\buildSrc\build\classes\kotlin\main\Dependencies.class;D:\Android Studio projects\scSusu\buildSrc\build\classes\kotlin\main\Versions.class
+C:\Users\Home\gameVerman\buildSrc\build\classes\kotlin\main\Config.class;C:\Users\Home\gameVerman\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Users\Home\gameVerman\buildSrc\build\classes\kotlin\main\Versions.class

@@ -17,12 +17,13 @@
         android:id="@+id/btnSecondGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Соединение пар чисел" />
+        android:text="Повторение последовательности" />
 
     <Button
         android:id="@+id/btnThirdGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Повторение последовательности" />
+        android:text="Соединение пар чисел"
+        android:visibility="gone"/>
 
 </LinearLayout>

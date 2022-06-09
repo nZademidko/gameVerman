@@ -119,7 +119,7 @@ class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
                 Snackbar.make(requireView(), "Вам удалось!!!", Snackbar.LENGTH_LONG).show()
                 navigate(SecondGameFragmentDirections.toGameScreen(args.resId))
             } else {
-                Snackbar.make(requireView(), "К сожалению вы проиграли", Snackbar.LENGTH_LONG)
+                Snackbar.make(requireView(), "К сожалению, Вы проиграли", Snackbar.LENGTH_LONG)
                     .show()
                 navigate(SecondGameFragmentDirections.toPlots())
             }

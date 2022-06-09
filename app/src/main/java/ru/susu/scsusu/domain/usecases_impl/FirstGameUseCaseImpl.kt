@@ -60,7 +60,7 @@ class FirstGameUseCaseImpl @Inject constructor() : FirstGameUseCase {
 
     private fun generateNumber(): Int {
         val number = when (difficulty) {
-            0 -> Random.nextInt(0, 10)
+            0 -> Random.nextInt(1, 10)
             1 -> Random.nextInt(1, 15)
             2 -> Random.nextInt(7, 20)
             3 -> Random.nextInt(-10, 20)

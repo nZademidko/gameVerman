@@ -21,7 +21,7 @@ class FirstGameViewModel @Inject constructor(
 
     private val args = FirstGameFragmentArgs.fromSavedStateHandle(savedStateHandle)
 
-    private val viewState =
+    val viewState =
         MutableStateFlow(FirstGameViewState(level = if (args.level >= 1) args.level else 1))
     val operationStringState = viewState.mapDistinct { it.operationString }
     val isAnswerCorrectState = viewState.mapDistinct { it.isAnswerCorrect }

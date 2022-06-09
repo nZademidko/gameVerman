@@ -75,7 +75,8 @@
 
 
 
-    <string name="button_0">Продолжить</string>
+    <string name="button_0">Продолжить.</string>
+    <string name="button_01">Продолжить. [Запускает мини-игру]</string>
     <string name="button_101">Отправились в отель, чтобы отдохнуть, прежде чем приступать к работе. </string>
     <string name="button_102">Отправились к офису SmartBuild, чтобы осмотреться.</string>
     <string name="button_103">Поужинать привычной едой</string>

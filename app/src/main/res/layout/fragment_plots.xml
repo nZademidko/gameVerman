@@ -17,13 +17,13 @@
         android:id="@+id/btnPlotTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Сюжет 2" />
+        android:text="Сюжет 2 [Недоступно]" />
 
     <Button
         android:id="@+id/btnPlotThree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Сюжет 3" />
+        android:text="Сюжет 3 [Недоступно]" />
 
     <Button
         android:id="@+id/btnFinal"
