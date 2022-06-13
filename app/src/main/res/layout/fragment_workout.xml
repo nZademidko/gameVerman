@@ -23,7 +23,6 @@
         android:id="@+id/btnThirdGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Соединение пар чисел"
-        android:visibility="gone"/>
+        android:text="Соединение пар чисел"/>
 
 </LinearLayout>

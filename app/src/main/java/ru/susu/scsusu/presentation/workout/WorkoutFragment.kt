@@ -25,7 +25,7 @@ class WorkoutFragment : BaseFragment(R.layout.fragment_workout) {
             }
 
             btnThirdGame.setOnClickListener {
-
+                navigate(WorkoutFragmentDirections.toThirdGame())
             }
         }
     }

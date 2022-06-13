@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/l0"
+            style="@style/LetterSecondGame"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/l1"
+            style="@style/LetterSecondGame"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/l2"
+            style="@style/LetterSecondGame"
+            android:text="2" />
+
+        <TextView
+            android:id="@+id/l3"
+            style="@style/LetterSecondGame"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/l4"
+            style="@style/LetterSecondGame"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/l5"
+            style="@style/LetterSecondGame"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/l6"
+            style="@style/LetterSecondGame"
+            android:text="6" />
+
+        <TextView
+            android:id="@+id/l7"
+            style="@style/LetterSecondGame"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/l8"
+            style="@style/LetterSecondGame"
+            android:text="8" />
+
+        <TextView
+            android:id="@+id/l9"
+            style="@style/LetterSecondGame"
+            android:text="9" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/r0"
+            style="@style/LetterSecondGame"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/r1"
+            style="@style/LetterSecondGame"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/r2"
+            style="@style/LetterSecondGame"
+            android:text="2" />
+
+        <TextView
+            android:id="@+id/r3"
+            style="@style/LetterSecondGame"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/r4"
+            style="@style/LetterSecondGame"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/r5"
+            style="@style/LetterSecondGame"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/r6"
+            style="@style/LetterSecondGame"
+            android:text="6" />
+
+        <TextView
+            android:id="@+id/r7"
+            style="@style/LetterSecondGame"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/r8"
+            style="@style/LetterSecondGame"
+            android:text="8" />
+
+        <TextView
+            android:id="@+id/r9"
+            style="@style/LetterSecondGame"
+            android:text="9" />
+
+    </GridLayout>
+
+</LinearLayout>

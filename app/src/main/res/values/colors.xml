@@ -10,5 +10,6 @@
     <color name="light_grey">#D6D6D6</color>
     <color name="bg_quest_text">#EDEDED</color>
     <color name="red">#E35B5B</color>
+    <color name="yellow">#E3C65B</color>
     <color name="green">#65E184</color>
 </resources>

@@ -46,6 +46,7 @@ dependencies {
     implementation(Dependencies.viewPager2)
     implementation(Dependencies.glide)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
     kapt(Dependencies.glide_compiler)
 
     api(Dependencies.lifecycle_viewmodel)

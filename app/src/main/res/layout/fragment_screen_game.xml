@@ -12,8 +12,8 @@
         android:layout_margin="16dp"
         android:background="@drawable/background_quest_text"
         android:letterSpacing="0.1"
-        android:paddingTop="4dp"
         android:paddingHorizontal="32dp"
+        android:paddingTop="4dp"
         android:paddingBottom="32dp"
         android:scrollbars="vertical"
         android:textColor="@color/black"
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст" />
+        tools:text="ТекстТекстТекстТекс  тТекстТsadadsasaasdsadекстТекст ТекстТекстТекстТекстТекс тТекстТекстТекстТекстТе кстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"

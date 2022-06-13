@@ -1,7 +1,6 @@
 package ru.susu.scsusu.presentation.second_game
 
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
@@ -12,8 +11,6 @@ import ru.susu.scsusu.databinding.FragmentGameSecondBinding
 import ru.susu.scsusu.extensions.navigate
 import ru.susu.scsusu.extensions.observe
 import ru.susu.scsusu.presentation.base.BaseFragment
-import ru.susu.scsusu.presentation.first_game.FirstGameFragmentArgs
-import ru.susu.scsusu.presentation.first_game.FirstGameFragmentDirections
 
 @AndroidEntryPoint
 class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
@@ -82,28 +79,28 @@ class SecondGameFragment : BaseFragment(R.layout.fragment_game_second) {
 
         observe(viewModel.showRightSeqState) { digit ->
             buttonList.forEach { tv ->
-                tv.setBackgroundResource(R.drawable.background_grey_letter_second_game)
+                tv.setBackgroundResource(R.drawable.background_letter_grey)
             }
 
             buttonList.forEachIndexed { index, tv ->
                 if (index + 1 == digit) {
-                    tv.setBackgroundResource(R.drawable.background_green_letter_second_game)
+                    tv.setBackgroundResource(R.drawable.background_letter_green)
                 }
             }
         }
 
         observe(viewModel.isChosenDigitRightState) { state ->
             buttonList.forEach { tv ->
-                tv.setBackgroundResource(R.drawable.background_grey_letter_second_game)
+                tv.setBackgroundResource(R.drawable.background_letter_grey)
             }
 
             buttonList.forEachIndexed { index, tv ->
                 if (index + 1 == state.digit) {
                     tv.setBackgroundResource(
                         if (state.isRight) {
-                            R.drawable.background_green_letter_second_game
+                            R.drawable.background_letter_green
                         } else {
-                            R.drawable.background_red_letter_second_game
+                            R.drawable.background_letter_red
                         }
                     )
                 }

@@ -34,6 +34,9 @@ class GameScreenFragment : BaseFragment(R.layout.fragment_screen_game) {
                         resId = it.navigationId
                     )
                 )
+                GameType.MATCH_MARKING -> navigate(
+                    GameScreenFragmentDirections.toThirdGame(resId = it.navigationId)
+                )
             }
         }
     }

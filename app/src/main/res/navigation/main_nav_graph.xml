@@ -43,6 +43,10 @@
             android:id="@+id/toSecondGame"
             app:destination="@id/secondGameFragment" />
 
+        <action
+            android:id="@+id/toThirdGame"
+            app:destination="@id/thirdGameFragment" />
+
     </fragment>
 
     <fragment
@@ -109,6 +113,28 @@
     </fragment>
 
     <fragment
+        android:id="@+id/thirdGameFragment"
+        android:name="ru.susu.scsusu.presentation.third_game.ThirdGameFragment">
+
+        <action
+            android:id="@+id/toGameScreen"
+            app:destination="@id/gameScreenFragment"
+            app:popUpTo="@id/plotsFragment" />
+
+        <action
+            android:id="@+id/toPlots"
+            app:destination="@id/plotsFragment"
+            app:popUpTo="@id/mainFragment" />
+
+        <argument
+            android:name="resId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+
+    </fragment>
+
+    <fragment
         android:id="@+id/gameScreenFragment"
         android:name="ru.susu.scsusu.presentation.plots.GameScreenFragment">
 
@@ -131,6 +157,10 @@
             app:destination="@+id/secondGameFragment"
             app:popUpTo="@id/plotsFragment" />
 
+        <action
+            android:id="@+id/toThirdGame"
+            app:destination="@+id/thirdGameFragment"
+            app:popUpTo="@id/plotsFragment" />
     </fragment>
 
 </navigation>

@@ -72,7 +72,7 @@ val dataMap =
         ),
         R.string.text_110 to listOf(
             //ButtonRes(false, R.string.button_107, R.string.text_130),
-            ButtonRes(GameType.MATH_PROBLEM, R.string.button_108, R.string.text_111),
+            ButtonRes(GameType.MATCH_MARKING, R.string.button_108, R.string.text_111),
             //ButtonRes(false, R.string.button_109, R.string.text_131)
         ),
         R.string.text_111 to listOf(
@@ -87,11 +87,11 @@ val dataMap =
             )
         ),
         R.string.text_113 to listOf(
-            ButtonRes(GameType.MATH_PROBLEM, R.string.button_113, R.string.text_114),
-            ButtonRes(GameType.REPEAT_SEQUENCE, R.string.button_114, R.string.text_121)
+            ButtonRes(GameType.MATCH_MARKING, R.string.button_113, R.string.text_114),
+            ButtonRes(GameType.MATCH_MARKING, R.string.button_114, R.string.text_121)
         ),
         R.string.text_114 to listOf(
-            ButtonRes(GameType.REPEAT_SEQUENCE, R.string.button_115, R.string.text_115),
+            ButtonRes(GameType.MATCH_MARKING, R.string.button_115, R.string.text_115),
             ButtonRes(GameType.REPEAT_SEQUENCE, R.string.button_116, R.string.text_120, 5, 7)
         ),
         R.string.text_115 to listOf(
