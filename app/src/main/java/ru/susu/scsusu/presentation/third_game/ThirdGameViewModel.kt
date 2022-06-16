@@ -29,6 +29,8 @@ class ThirdGameViewModel @Inject constructor(
     val curRState = viewState.mapDistinct { it.curR }
     val twoDigitsIsCorrectState = MutableStateFlow(TwoDigitsIsCorrectState())
     val navAction = MutableSharedFlow<Boolean>()
+    var time = args.time
+    val minTime = 15000L
 
     init {
         generateProblem()
@@ -36,6 +38,7 @@ class ThirdGameViewModel @Inject constructor(
 
     fun generateProblem() {
         viewState.value = thirdGameUseCase.generateProblem()
+        if (time > minTime) time-=1000
     }
 
     fun onLeftSideClicked(digit: Int) {

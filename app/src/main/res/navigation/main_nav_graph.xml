@@ -130,6 +130,10 @@
             android:name="resId"
             android:defaultValue="-1"
             app:argType="integer" />
+        <argument
+            android:name="time"
+            app:argType="long"
+            android:defaultValue="25000L" />
 
 
     </fragment>

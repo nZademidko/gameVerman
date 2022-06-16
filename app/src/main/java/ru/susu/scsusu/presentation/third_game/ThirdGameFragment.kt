@@ -1,5 +1,7 @@
 package ru.susu.scsusu.presentation.third_game
 
+import android.annotation.SuppressLint
+import android.os.CountDownTimer
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -11,6 +13,7 @@ import ru.susu.scsusu.databinding.FragmentGameThirdBinding
 import ru.susu.scsusu.extensions.navigate
 import ru.susu.scsusu.extensions.observe
 import ru.susu.scsusu.presentation.base.BaseFragment
+import ru.susu.scsusu.presentation.first_game.FirstGameFragmentDirections
 import ru.susu.scsusu.presentation.second_game.SecondGameFragmentArgs
 import ru.susu.scsusu.presentation.second_game.SecondGameFragmentDirections
 
@@ -20,6 +23,7 @@ class ThirdGameFragment : BaseFragment(R.layout.fragment_game_third) {
     override val viewModel by viewModels<ThirdGameViewModel>()
     private val binding by viewBinding<FragmentGameThirdBinding>()
     private val args by navArgs<ThirdGameFragmentArgs>()
+    private var timer: CountDownTimer? = null
 
     private val arrL by lazy {
         with(binding) {
@@ -34,6 +38,7 @@ class ThirdGameFragment : BaseFragment(R.layout.fragment_game_third) {
     }
 
     override fun initView() {
+        startTimer(viewModel.time)
         with(binding) {
             arrL.forEach { tv ->
                 tv.setOnClickListener {
@@ -123,12 +128,34 @@ class ThirdGameFragment : BaseFragment(R.layout.fragment_game_third) {
         observe(viewModel.navAction) { isCorrect ->
             if (isCorrect) {
                 Snackbar.make(requireView(), "Вам удалось!!!", Snackbar.LENGTH_LONG).show()
-                navigate(SecondGameFragmentDirections.toGameScreen(args.resId))
+                navigate(ThirdGameFragmentDirections.toGameScreen(args.resId))
             } else {
                 Snackbar.make(requireView(), "К сожалению, Вы проиграли", Snackbar.LENGTH_LONG)
                     .show()
-                navigate(SecondGameFragmentDirections.toPlots())
+                navigate(ThirdGameFragmentDirections.toPlots())
             }
         }
+    }
+
+    private fun startTimer(timeMillis: Long) {
+        timer?.cancel()
+        timer = object : CountDownTimer(timeMillis, 1000) {
+            @SuppressLint("SetTextI18n")
+            override fun onTick(p0: Long) {
+                binding.timerText.text = "Осталось " + (p0 / 1000).toString() + " секунд"
+            }
+
+            override fun onFinish() {
+                Snackbar.make(requireView(), "К сожалению, Вы проиграли", Snackbar.LENGTH_LONG)
+                    .show()
+                timer?.cancel()
+                navigate(ThirdGameFragmentDirections.toPlots())
+            }
+        }.start()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        timer?.cancel()
     }
 }
